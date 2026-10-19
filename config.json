@@ -1,0 +1,13 @@
+{
+  "video_source": "record_20250620_183903.mp4",
+  "yolo_model_path": "models/yolov8n-face.pt",
+  "insightface_model": "buffalo_l",
+  "detection_skip_frames": 2,
+  "confidence_threshold": 0.45,
+  "face_match_threshold": 0.45,
+  "tracking_iou_threshold": 0.3,
+  "max_lost_detection_cycles": 8,
+  "database_path": "data/visitors.db",
+  "logs_root": "logs",
+  "window_name": "Katomaran Intelligent Face Tracker"
+}

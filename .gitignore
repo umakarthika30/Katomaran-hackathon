@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+data/*.db
+logs/entries/*
+logs/exits/*
+!logs/entries/.gitkeep
+!logs/exits/.gitkeep
+models/*.pt
+*.onnx
+.DS_Store

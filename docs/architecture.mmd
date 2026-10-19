@@ -1,0 +1,16 @@
+flowchart TD
+    A[Video / Webcam / RTSP] --> B[YOLO Face Detection]
+    B --> C[Face Boxes]
+    C --> D[InsightFace Embeddings]
+    D --> E{Cosine Similarity}
+    E -->|New| F[Register face_id]
+    E -->|Known| G[Reuse face_id]
+    F --> H[IoU Tracker]
+    G --> H
+    H --> I[Entry / Exit Event Manager]
+    I --> J[Save timestamped face crop]
+    I --> K[(SQLite events)]
+    F --> L[(SQLite visitors)]
+    I --> M[events.log]
+    K --> N[Unique Visitor Count]
+    L --> N
